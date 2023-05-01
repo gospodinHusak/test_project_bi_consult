@@ -1,4 +1,7 @@
-from typing import Literal, Union
+try:
+    from typing import Literal, Union
+except ImportError:
+    from typing_extensions import Literal, Union
 from dash import dcc, html, callback_context
 import dash_bootstrap_components as dbc
 
