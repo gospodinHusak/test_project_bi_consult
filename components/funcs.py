@@ -12,7 +12,7 @@ def to_dependencies(id_prefix: str, target: dict) -> list:
     return output
 
 
-def merge_children(items: list[Any]) -> list:
+def merge_children(items: list) -> list:
     result = []
     for i in items:
         if not isinstance(i, list):
