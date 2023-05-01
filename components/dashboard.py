@@ -3,9 +3,9 @@ from dash import Dash, html, dcc, callback_context as ctx
 from dash.exceptions import PreventUpdate
 import dash_bootstrap_components as dbc
 try:
-    from typing import Literal, Union
+    from typing import Literal
 except ImportError:
-    from typing_extensions import Literal, Union
+    from typing_extensions import Literal
 from .funcs import get_clear_args, to_dependencies
 from .filter import Filter
 from .parameter import Parameter
@@ -158,7 +158,7 @@ class Dashboard:
 
     def add_filter(self, datasource_id: str, source_column: str, name: str = None,
                    filter_type: Literal['checkbox', 'radio', 'interval', 'daterange'] = 'checkbox',
-                   default_value: Union[list, int, str] = None, target_windows: list = None) -> None:
+                   default_value = None, target_windows: list = None) -> None:
         filter_obj = Filter(
             columns_config=self.datasource_objs[datasource_id].columns_config,
             dashboard_id=self.id,
