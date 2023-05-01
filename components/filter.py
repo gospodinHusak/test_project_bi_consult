@@ -1,7 +1,7 @@
 try:
-    from typing import Literal, Union
+    from typing import Literal
 except ImportError:
-    from typing_extensions import Literal, Union
+    from typing_extensions import Literal
 from dash import dcc, html, callback_context
 import dash_bootstrap_components as dbc
 
@@ -9,7 +9,7 @@ import dash_bootstrap_components as dbc
 class Filter:
     def __init__(self, dashboard_id: str, datasource_id: str, source_column: str, columns_config: dict, name: str = None,
                  filter_type: Literal['checkbox', 'radio', 'interval', 'daterange'] = 'checkbox',
-                 default_value: Union[list, int, str] = None, target_windows: list = None):
+                 default_value = None, target_windows: list = None):
         if source_column not in columns_config.keys():
             raise ValueError(f'''
                 There is no column {source_column} in datasource filter columns.
