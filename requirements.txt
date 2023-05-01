@@ -8,3 +8,4 @@ pandas
 plotly==5.8.2
 gunicorn
 typing
+typing_extensions
