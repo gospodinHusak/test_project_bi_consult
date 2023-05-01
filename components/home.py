@@ -1,6 +1,9 @@
 from dash import html, callback_context as ctx
 from .constants import ABOUT_TXT, HOME_PAGE_TITLE
-from typing import Literal
+try:
+    from typing import Literal
+except ImportError:
+    from typing_extensions import Literal
 
 
 class Home:
