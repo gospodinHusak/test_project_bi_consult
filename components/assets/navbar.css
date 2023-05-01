@@ -1,0 +1,85 @@
+.custom-navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  padding: 0 .5rem;
+  z-index: 1020;
+  background-color: #001829;
+  border-bottom: 2px solid #3d67ff;
+}
+
+.link {
+  font-size: 20px;
+}
+
+.link-active {
+  font-size: 20px;
+  color: #3d67ff;
+  font-weight: bolder;
+}
+
+.nav-link:focus, .nav-link:hover {
+  color: #3d67ff;
+}
+
+.links {
+  display: flex;
+  padding-left: 1rem;
+}
+
+.nav-panel-buttons {
+  margin-left: auto;
+  display: flex;
+}
+
+.brand {
+  margin-top: 10px;
+  display: inline;
+  line-height: 100%;
+  vertical-align: middle;
+  margin-left: .5rem;
+}
+
+.nav-button {
+  width: 50px;
+  height: 51px;
+  background-color: #3d67ff;
+  border: none;
+}
+
+.home-button {
+  width: 50px;
+  height: 51px;
+  color: #3d67ff;
+  border: none
+}
+
+.dropdown-menu {
+  position: absolute;
+  z-index: 1000;
+  display: none;
+  min-width: 10rem;
+
+  font-size: 1rem;
+  color: #aaa;
+  text-align: left;
+  list-style: none;
+  background-color: transparent;
+  backdrop-filter: blur(8px);
+  background-clip: padding-box;
+  border-radius: 0px;
+  border-color: #3d67ff;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+#pages_list-btn {
+    margin: 0 1rem;
+    background-color: transparent;
+    color: #3d67ff;
+    font-size: 26px;
+    height: 51px;
+    border: none;
+}

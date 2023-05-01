@@ -1,0 +1,96 @@
+#page-content-container {
+  position: relative;
+  margin: 53px 1vw 0 1vw;
+  height: calc(100vh - 53px);
+}
+
+.dashboard-div {
+    display: grid;
+    width: calc(100vw - 2vw);
+    height: calc(100vh - 60px);
+}
+
+.window {
+    display: flex;
+    flex-direction: column;
+}
+
+.label-row {
+    align-items: center;
+}
+
+.graph-label {
+  text-align: center;
+  margin-bottom: 0px;
+  font-size: 24px
+}
+
+
+.graph-row {
+  display: flex;
+  padding-bottom: 1vh;
+  flex: 1 1 auto;
+  justify-content: center;
+}
+
+.side-div {
+    flex-shrink: 0;
+}
+
+.graph:not(.map) {
+  margin-right: 10px;
+  height: 100%;
+  width: 100%;
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #EBEBF5;
+}
+
+.graph.map {
+  border: 2px solid #EBEBF5;
+  margin-right: auto;
+  width: 90%;
+  margin-bottom: auto;
+  max-height: 90vh;
+  max-width: 90vh;
+}
+
+
+
+.dash-table-container {
+  height: calc(100% - 44px);
+  margin-top: 0;
+  margin-bottom: auto;
+  width: 100%;
+}
+
+.dash-spreadsheet-inner {
+  height: 100%;
+  width: 100%;
+}
+
+.dt-table-container__row-1 {
+  height: 100%;
+  width: 100%;
+}
+
+.cell-1-1 {
+  height: 100%;
+  width: 100%;
+}
+
+tbody {
+  height: 100%;
+  width: 100%;
+}
+
+.cell-table {
+  height: 100%;
+  width: 100%;
+}
+
+.dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner table {
+  --hover: rgba(0, 0, 0, 0) !important;
+}
