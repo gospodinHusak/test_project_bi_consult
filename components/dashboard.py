@@ -2,7 +2,10 @@ from os import path
 from dash import Dash, html, dcc, callback_context as ctx
 from dash.exceptions import PreventUpdate
 import dash_bootstrap_components as dbc
-from typing import Literal, Union
+try:
+    from typing import Literal, Union
+except ImportError:
+    from typing_extensions import Literal, Union
 from .funcs import get_clear_args, to_dependencies
 from .filter import Filter
 from .parameter import Parameter
