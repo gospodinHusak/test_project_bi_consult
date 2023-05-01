@@ -3,7 +3,7 @@ import os
 from .constants import IGNORED
 
 
-def to_dependencies(id_prefix: str, target: dict) -> list[tuple]:
+def to_dependencies(id_prefix: str, target: dict) -> list:
     output: list[tuple] = []
     for window_id, components in target.items():
         for component in components:
