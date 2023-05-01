@@ -11,7 +11,7 @@ from .filter import Filter
 from .parameter import Parameter
 from .window import Window
 from .datasource import DataSource
-from .app import App
+from .application import App
 from inspect import stack
 
 
