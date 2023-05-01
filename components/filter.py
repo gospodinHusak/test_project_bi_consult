@@ -78,7 +78,7 @@ class Filter:
         else:
             return None
 
-    def _checkbox(self) -> list[dbc.Checklist]:
+    def _checkbox(self) -> list:
         all_value_item = dbc.Checklist(
             id=self.component_id + "-all-value",
             options=[{"label": "All", "value": "All"}],
