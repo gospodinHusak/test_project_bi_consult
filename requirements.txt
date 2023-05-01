@@ -26,8 +26,6 @@ Flask==2.1.2
 Flask-Compress==1.12
 fsspec==2022.5.0
 idna==3.4
-ipykernel==6.13.1
-ipython==8.4.0
 itsdangerous==2.1.2
 jedi==0.18.1
 Jinja2==3.1.2
