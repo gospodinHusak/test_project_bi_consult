@@ -3,7 +3,10 @@ import dash_bootstrap_components as dbc
 from .navbar import NavBar
 from .home import Home
 from .callback import Callback
-from typing import Literal
+try:
+    from typing import Literal
+except ImportError:
+    from typing_extensions import Literal
 
 
 class Structure:
