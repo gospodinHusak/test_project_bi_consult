@@ -2,7 +2,10 @@ from dash import Dash
 from .structure import Structure
 from .funcs import get_names
 from dash_bootstrap_components.themes import SLATE
-from typing import Literal
+try:
+    from typing import Literal
+except ImportError:
+    from typing_extensions import Literal
 from importlib.util import spec_from_file_location, module_from_spec
 from sys import modules
 from os import path
