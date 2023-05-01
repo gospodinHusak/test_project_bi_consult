@@ -49,7 +49,7 @@ class Filter:
                 raise TypeError(f'Default value for {self.filter_type} filter should be of type list')
         return True
 
-    def _validate_value_existence(self, target_value: Union[list, int, str], column_values: set) -> bool:
+    def _validate_value_existence(self, target_value, column_values: set) -> bool:
         target_value = [target_value] if isinstance(target_value, (int, str)) else target_value
         if not set(target_value).issubset(column_values):
             raise ValueError(f'''Value(s) for default_value not found in column '{self.source_column}'.''')
