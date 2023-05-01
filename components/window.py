@@ -4,7 +4,10 @@ from dash_iconify import DashIconify
 import plotly.graph_objects as go
 from .constants import EMPTY_LAYOUT, MODEBAR_BUTTONS, META_BUTTONS, TABLE_STYLE_CELL, TABLE_STYLE_HEADER
 from .funcs import merge_children
-from typing import Literal
+try:
+    from typing import Litera
+except ImportError:
+    from typing_extensions import Literal
 
 
 class Window:
