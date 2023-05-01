@@ -8,4 +8,4 @@ from .home import Home
 from .navbar import NavBar
 from .structure import Structure
 from .window import Window
-from .app import App
+from .application import App
