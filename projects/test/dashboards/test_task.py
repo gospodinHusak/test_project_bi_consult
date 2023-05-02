@@ -113,8 +113,8 @@ def window_1(filterpanel_values):
     if movement_param != '':
         query_expressions['Movements'] += f' & {movement_param}'
 
-    movement_df = movements.query(query_expressions['Movements'])
-    items_df = items.query(query_expressions['Items'])
+    movement_df = movements.dataframe.query(query_expressions['Movements'])
+    items_df = items.dataframe.query(query_expressions['Items'])
     movement_df['Date'] = pd.to_datetime(movement_df.Date, format='%Y-%m-%d')
     movement_df = (
         movement_df
@@ -162,8 +162,8 @@ def window_2(data, rows, filterpanel_values):
     if movement_param != '':
         query_expressions['Movements'] += f' & {movement_param}'
 
-    movement_df = movements.query(query_expressions['Movements'])
-    items_df = items.query(query_expressions['Items'])
+    movement_df = movements.dataframe.query(query_expressions['Movements'])
+    items_df = items.dataframe.query(query_expressions['Items'])
     items_df = items_df.query(f'Name in {names}')
 
     movement_df = movement_df.groupby(['ID'])['Movement'].agg([('Spendings' , lambda x : (x[x < 0] * -1).sum()) , ('Earnings' , lambda x : x[x > 0].sum())])
@@ -241,8 +241,8 @@ def window_3(data, rows, filterpanel_values):
     if movement_param != '':
         query_expressions['Movements'] += f' & {movement_param}'
 
-    movement_df = movements.query(query_expressions['Movements'])
-    items_df = items.query(query_expressions['Items'])
+    movement_df = movements.dataframe.query(query_expressions['Movements'])
+    items_df = items.dataframe.query(query_expressions['Items'])
     items_df = items_df.query(f'Name in {names}')
     movement_df['Date'] = pd.to_datetime(movement_df.Date, format='%Y-%m-%d')
     movement_df['Balance State'] = movement_df.sort_values(by=['Date', 'ID']).groupby(['ID'])['Movement'].cumsum()
