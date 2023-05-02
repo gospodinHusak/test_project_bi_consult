@@ -4,7 +4,7 @@ SPENDINGS_EARNINGS = {
 }
 
 NAME_COLORS = {
-    'Дебиторская задолженность': 'rgba(60, 255, 255, {opacity})',
-    'Основные средства': 'rgba(255, 60, 165, {opacity})',
-    'Отгрузка': 'rgba(255, 177, 60, {opacity})'
+    'Accounts receivable': 'rgba(60, 255, 255, {opacity})',
+    'Main Resources': 'rgba(255, 60, 165, {opacity})',
+    'Shipping': 'rgba(255, 177, 60, {opacity})'
 }
