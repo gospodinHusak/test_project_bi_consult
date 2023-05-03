@@ -17,7 +17,7 @@ from inspect import stack
 
 
 class Dashboard:
-    def __init__(self, datasource_objs: DataSource, overview_text: str = None, name: str = None):
+    def __init__(self, datasource_objs: list, overview_text: str = None, name: str = None):
         self.dashboard_path = stack()[1][1]
         self.id = path.basename(self.dashboard_path).split('.')[0]
         self._set_id_prefix()
